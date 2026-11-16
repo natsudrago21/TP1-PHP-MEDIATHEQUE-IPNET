@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Médiathèque IPNET</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=<?php echo filemtime(__DIR__ . '/../css/style.css'); ?>">
 </head>
 <body>
     <header>
         <h1>Médiathèque IPNET</h1>
         <nav>
-            <a href="index.php">Accueil</a> |
-            <a href="catalogue.php">Catalogue</a> |
+            <a href="index.php">Accueil</a>
+            <a href="catalogue.php">Catalogue</a>
             <a href="apropos.php">À propos</a>
         </nav>
         <hr>

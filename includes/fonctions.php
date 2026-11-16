@@ -13,7 +13,7 @@ function compterLivresDisponibles(array $livres): int {
 function filtrerParCategorie(array $livres, string $categorie): array {
     $resultat = [];
     foreach ($livres as $livre) {
-       
+
         if (strtolower($livre['categorie']) == strtolower($categorie)) {
             $resultat[] = $livre;
         }
@@ -32,16 +32,17 @@ function trouverLivreParId(array $livres, int $id): ?array {
 
 function afficherLivre(array $livre): string {
     $statut = $livre['disponible'] ? 'Disponible' : 'Emprunté';
-    
-    $html = "<div style='border: 1px solid #ccc; padding: 10px; margin-bottom: 10px; background: #fff;'>";
+
+    $classe = $livre['disponible'] ? 'dispo' : 'emprunte';
+    $html = "<div class='livre'>";
     $html .= "<h3>" . htmlspecialchars($livre['titre']) . "</h3>";
     $html .= "<p>Auteur : " . htmlspecialchars($livre['auteur']) . "</p>";
     $html .= "<p>Année : " . htmlspecialchars($livre['annee']) . "</p>";
     $html .= "<p>Catégorie : " . htmlspecialchars($livre['categorie']) . "</p>";
     $html .= "<p>Prix : " . htmlspecialchars($livre['prix']) . " €</p>";
-    $html .= "<p>Statut : " . $statut . "</p>";
+    $html .= "<p>Statut : <span class='badge $classe'>" . $statut . "</span></p>";
     $html .= "<a href='detail.php?id=" . $livre['id'] . "'>Voir les détails</a>";
     $html .= "</div>";
-    
+
     return $html;
 }

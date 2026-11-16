@@ -22,15 +22,15 @@ include 'includes/header.php';
 <h2>Détails du livre</h2>
 
 <?php if (!empty($erreur)) : ?>
-    <p style="color: red;"><?php echo htmlspecialchars($erreur); ?></p>
+    <p class="erreur"><?php echo htmlspecialchars($erreur); ?></p>
 <?php else : ?>
-    <div style="border: 1px solid #999; padding: 15px; background: #fff;">
+    <div class="livre-detail">
         <h3><?php echo htmlspecialchars($livreTrouve['titre']); ?></h3>
         <p><strong>Auteur :</strong> <?php echo htmlspecialchars($livreTrouve['auteur']); ?></p>
         <p><strong>Année :</strong> <?php echo htmlspecialchars($livreTrouve['annee']); ?></p>
         <p><strong>Catégorie :</strong> <?php echo htmlspecialchars($livreTrouve['categorie']); ?></p>
         <p><strong>Prix :</strong> <?php echo htmlspecialchars($livreTrouve['prix']); ?> €</p>
-        <p><strong>Disponibilité :</strong> <?php echo $livreTrouve['disponible'] ? 'Disponible' : 'Emprunté'; ?></p>
+        <p><strong>Disponibilité :</strong> <span class="badge <?php echo $livreTrouve['disponible'] ? 'dispo' : 'emprunte'; ?>"><?php echo $livreTrouve['disponible'] ? 'Disponible' : 'Emprunté'; ?></span></p>
     </div>
 <?php endif; ?>
 

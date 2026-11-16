@@ -2,18 +2,18 @@
 $livres = [
     [
         'id' => 1,
-        'titre' => 'Les Misérables',
-        'auteur' => 'Victor Hugo',
-        'annee' => 1862,
+        'titre' => 'Une si longue lettre',
+        'auteur' => 'Mariama Bâ',
+        'annee' => 1979,
         'categorie' => 'Roman',
         'prix' => 15.50,
         'disponible' => true
     ],
     [
         'id' => 2,
-        'titre' => 'L\'Étranger',
-        'auteur' => 'Albert Camus',
-        'annee' => 1942,
+        'titre' => 'Maïmouna',
+        'auteur' => 'Abdoulaye Sadji',
+        'annee' => 1958,
         'categorie' => 'Roman',
         'prix' => 12.00,
         'disponible' => true
@@ -29,9 +29,9 @@ $livres = [
     ],
     [
         'id' => 4,
-        'titre' => 'Le Petit Prince',
-        'auteur' => 'Antoine de Saint-Exupéry',
-        'annee' => 1943,
+        'titre' => 'Les Contes d\'Amadou Koumba',
+        'auteur' => 'Birago Diop',
+        'annee' => 1947,
         'categorie' => 'Conte',
         'prix' => 10.00,
         'disponible' => true
@@ -47,18 +47,18 @@ $livres = [
     ],
     [
         'id' => 6,
-        'titre' => 'Vingt mille lieues sous les mers',
-        'auteur' => 'Jules Verne',
-        'annee' => 1870,
+        'titre' => 'Soundjata ou l\'épopée mandingue',
+        'auteur' => 'Djibril Tamsir Niane',
+        'annee' => 1960,
         'categorie' => 'Aventure',
         'prix' => 14.00,
         'disponible' => false
     ],
     [
         'id' => 7,
-        'titre' => 'De la terre à la lune',
-        'auteur' => 'Jules Verne',
-        'annee' => 1865,
+        'titre' => 'Doguicimi',
+        'auteur' => 'Paul Hazoumé',
+        'annee' => 1938,
         'categorie' => 'Aventure',
         'prix' => 13.50,
         'disponible' => true
